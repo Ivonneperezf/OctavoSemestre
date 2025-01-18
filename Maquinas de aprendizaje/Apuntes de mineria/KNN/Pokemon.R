@@ -58,7 +58,59 @@ combined_training_test <- rbind(training_data, testing_data)
 View(training_data)
 View(testing_data)
 combined_training_test$type1 <- factor(c(as.character(training_data$type1), rep(NA,
-View(combined_training_test)                                                                               nrow(testing_data))))
+                                                                              nrow(testing_data))))
+ggplot(data = combined_training_test, aes(x = attack, y = speed, col = type1)) +
+   geom_point(size = 3) +
+   ggtitle("Attack versus Speed for Pokemon of a Single Type (training and testing)")
+
+#Visualizacion por pares de cada variable disponible
+pairs(final_dataset[, 2:8],col = training_data$type1,lower.panel=NULL)
+
+#Aplicacion de KNN con velocidad/ataque
+training_data_speed_attack <- training_data %>%
+  select(c(speed,attack))
+testing_data_speed_attack <- testing_data %>%
+   select(c(speed,attack))
+knn_attack_speed <- knn(train = training_data_speed_attack, test = testing_data_speed_attack, cl
+                        = training_data$type1, k = 5)
+confusionMatrix(knn_attack_speed,testing_data$type1 )
+
+
+# Definir los parámetros de control para la validación cruzada
+trControl <- trainControl(method = "cv", number = 10)
+# Entrenar el modelo KNN con validación cruzada
+fit <- train(type1 ~ speed + attack,
+             method = "knn",
+             tuneGrid = expand.grid(k = 1:5),
+             trControl = trControl,
+             metric = "Accuracy",
+             data = validation_data)
+# Mostrar los resultados del modelo
+fit
+
+
+#Validacion de mas variables
+# Determine the optimal K
+fit_all_attributes <- train(type1 ~ speed + attack + defense + hp + sp_attack + sp_defense,
+                               method = "knn",
+                               tuneGrid = expand.grid(k = 1:5),
+                               trControl = trControl,
+                               metric = "Accuracy",
+                               data = validation_data)
+fit_all_attributes
+
+# Perform the KNN
+training_data_all <- training_data %>%
+   select(c(speed,attack, defense, hp, sp_attack, sp_defense))
+testing_data_all <- testing_data %>%
+   select(c(speed,attack, defense, hp, sp_attack, sp_defense))
+knn_all <- knn(train = training_data_all, test = testing_data_all, cl = training_data$type1, k = 4)
+
+confusionMatrix(knn_all,testing_data$type1 )
+
+
+
+
 
 
 
