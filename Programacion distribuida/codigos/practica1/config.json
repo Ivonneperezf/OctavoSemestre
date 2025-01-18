@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "ejemploKnn.pdf",
+        "ttl": 5,
+        "publish": true
+    },
+    {
+        "nombre": "k-nnOtroEjemplo.pdf",
+        "ttl": 56,
+        "publish": false
+    },
+    {
+        "nombre": "K_NN_IRIS.pdf",
+        "ttl": 78,
+        "publish": true
+    }
+]
