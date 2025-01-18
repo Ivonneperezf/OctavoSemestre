@@ -1,4 +1,5 @@
 import os
+import time
 from Archivo import Archivo
 import json
 
