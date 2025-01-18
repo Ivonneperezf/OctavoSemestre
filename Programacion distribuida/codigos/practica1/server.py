@@ -120,7 +120,9 @@ class Server:
     def iniciar_socket_udp(self):
         print(f"Iniciando socket UDP en el puerto {self.port}...")
         self.udp_socket.bind(("0.0.0.0", self.port))
-        # while True:
+        while True:
+            print("El socket servidor esta activo")
+            time.sleep(30)
         #     data, addr = self.udp_socket.recvfrom(1024)
         #     mensaje = data.decode("utf-8")
         #     logging.info(f"Mensaje recibido desde {addr}: {mensaje}")
