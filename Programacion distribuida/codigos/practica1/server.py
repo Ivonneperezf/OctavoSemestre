@@ -8,7 +8,6 @@ import logging
 class Server:
     def __init__(self):
         self.ruta = ""
-        self.archivo = []
         self.contenido = []
         self.nuevos_datos = []
         self.ruta_salida = "config.json"
@@ -25,18 +24,28 @@ class Server:
         )
     
     def leerRuta(self):
-        print("Inserte la ruta del directorio a conocer su listado")
-        self.ruta = input()
-        try:
-            contenido_bruto = os.listdir(self.ruta)
-            self.contenido = [archivo for archivo in contenido_bruto if '.' in archivo]
-            logging.info(f"Archivos obtenidos desde la ruta: {self.ruta}\n")
-        except FileNotFoundError:
-            print("La ruta proporcionada no es válida. Intente nuevamente.\n")
-            logging.error(f"Ruta no válida proporcionada: {self.ruta}")
-        except PermissionError:
-            print("No tiene permiso para acceder a esta ruta.\n")
-            logging.error(f"Permiso denegado para acceder a la ruta: {self.ruta}")
+        while True:  # Bucle para permitir reintentos en caso de ruta incorrecta
+            print("Inserte la ruta del directorio a conocer su listado:")
+            self.ruta = input()
+            if not os.path.isdir(self.ruta):  # Verifica si la ruta es un directorio válido
+                print("La ruta proporcionada no es válida. Intente nuevamente.\n")
+                logging.error(f"Ruta no válida proporcionada: {self.ruta}")
+            else:
+                try:
+                    contenido_bruto = os.listdir(self.ruta)
+                    # Filtrar solo los archivos con extensión
+                    self.contenido = [archivo for archivo in contenido_bruto if '.' in archivo]
+                    logging.info(f"Archivos obtenidos desde la ruta: {self.ruta}")
+                    break 
+                except PermissionError:
+                    print("No tiene permiso para acceder a esta ruta.\n")
+                    logging.error(f"Permiso denegado para acceder a la ruta: {self.ruta}")
+                    break 
+                except Exception as e:
+                    print(f"Error inesperado al intentar acceder a la ruta: {e}\n")
+                    logging.error(f"Error inesperado al intentar acceder a la ruta: {e}")
+                    break  
+
 
     def getContenido(self):
         contenido_bruto = os.listdir(self.ruta)

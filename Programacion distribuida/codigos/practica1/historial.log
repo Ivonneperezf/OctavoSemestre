@@ -8,10 +8,12 @@
 2025-01-18 11:29:29 - INFO - Archivos agregados: ['Nuevo Documento de texto.txt']
 2025-01-18 11:30:29 - INFO - Archivos eliminados: ['Nuevo Documento de texto.txt']
 2025-01-18 11:51:03 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\guegos Unri\\u878d\u5408\u7248\u5c4b\u9876(\u4e2d)2.1.5\u6d4b\u8bd5\u7248
-
 2025-01-18 11:51:22 - INFO - Archivos agregados: ['baselib.dll', 'GameAssembly.dll', 'PlantsVsZombiesRH.exe', 'UnityCrashHandler64.exe', 'UnityPlayer.dll', '\u5c4b\u9876\u6d4b\u8bd5\u7248(\u4e2d)2.1.5\u7248\u672c\u66f4\u65b0\u516c\u544a.txt']
 2025-01-18 11:51:22 - INFO - Archivos eliminados: ['Archivo.py', 'conexionServer.py', 'config.json', 'historial.log', 'server.py', 'Archivo.py', 'conexionServer.py', 'config.json', 'historial.log', 'server.py']
 2025-01-18 11:59:21 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
 2025-01-18 11:59:38 - INFO - Archivos agregados: ['analisisDatosR_II.pdf', 'filtrarResumirDatos_III.pdf', 'gestionComprensionDeDatos_II.pdf']
 2025-01-18 11:59:38 - INFO - Archivos eliminados: ['baselib.dll', 'GameAssembly.dll', 'PlantsVsZombiesRH.exe', 'UnityCrashHandler64.exe', 'UnityPlayer.dll', '\u5c4b\u9876\u6d4b\u8bd5\u7248(\u4e2d)2.1.5\u7248\u672c\u66f4\u65b0\u516c\u544a.txt']
 2025-01-18 12:02:47 - INFO - Archivos agregados: ['Nuevo Documento de texto.txt']
+2025-01-18 12:43:49 - ERROR - Ruta no valida proporcionada: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendiz
+2025-01-18 12:43:53 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-18 12:43:53 - INFO - Archivos eliminados: ['Nuevo Documento de texto.txt']
