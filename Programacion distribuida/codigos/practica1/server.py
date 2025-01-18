@@ -2,6 +2,8 @@ import threading
 import time
 import os
 import json
+import socket
+import logging
 
 class Server:
     def __init__(self):
@@ -9,19 +11,35 @@ class Server:
         self.archivo = []
         self.contenido = []
         self.nuevos_datos = []
+        #Inicializacion de socket
+        self.serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.host=socket.gethostname()
+        self.port=9999
+        # Configuración del logger
+        logging.basicConfig(
+            filename="historial.log",
+            level=logging.INFO,
+            format="%(asctime)s - %(levelname)s - %(message)s",
+            datefmt="%Y-%m-%d %H:%M:%S"
+        )
     
     def leerRuta(self):
         print("Inserte la ruta del directorio a conocer su listado")
         self.ruta = input()
-
-    def obtenerContenido(self):
         try:
             contenido_bruto = os.listdir(self.ruta)
             self.contenido = [archivo for archivo in contenido_bruto if '.' in archivo]
+            logging.info(f"Archivos obtenidos desde la ruta: {self.ruta}")
         except FileNotFoundError:
             print("La ruta proporcionada no es válida. Intente nuevamente.")
+            logging.error(f"Ruta no válida proporcionada: {self.ruta}")
         except PermissionError:
             print("No tiene permiso para acceder a esta ruta.")
+            logging.error(f"Permiso denegado para acceder a la ruta: {self.ruta}")
+
+    def getContenido(self):
+        contenido_bruto = os.listdir(self.ruta)
+        self.contenido = [archivo for archivo in contenido_bruto if '.' in archivo]
 
     def obtenerDatosDeUsuario(self, lista_archivos):
         for archivo in lista_archivos:
@@ -42,7 +60,7 @@ class Server:
 
     def guardarEnJson(self):
         while True:
-            self.obtenerContenido()
+            self.getContenido()
             ruta_salida = "config.json"
             if os.path.exists(ruta_salida):
                 try:
@@ -59,21 +77,32 @@ class Server:
                             item for item in datos_existentes if item["nombre"] in self.contenido
                         ]
 
+                         # Filtrar archivos que ya no están en el sistema
+                        datos_eliminados = [
+                            item["nombre"] for item in datos_existentes if item["nombre"] not in self.contenido
+                        ]
+
                         if datos_a_guardar:
                             print(datos_a_guardar)
                             self.obtenerDatosDeUsuario(datos_a_guardar)
                             datos_existentes.extend(self.nuevos_datos)
+                            logging.info(f"Archivos agregados: {datos_a_guardar}")
+                        
+                        if datos_eliminados:
+                            logging.info(f"Archivos eliminados: {datos_eliminados}")
 
                     with open(ruta_salida, "w", encoding="utf-8") as archivo_json:
                         json.dump(datos_existentes, archivo_json, ensure_ascii=False, indent=4)
                     print(f"Datos actualizados en {ruta_salida}.")
                 except Exception as e:
                     print(f"Error al leer o actualizar el archivo JSON: {e}")
+                    logging.error(f"Error al actualizar el archivo JSON: {e}")
             else:
                 self.obtenerDatosDeUsuario(self.contenido)
                 try:
                     with open(ruta_salida, "w", encoding="utf-8") as archivo_json:
                         json.dump(self.nuevos_datos, archivo_json, ensure_ascii=False, indent=4)
+                    logging.info(f"Archivo JSON creado con los datos iniciales: {self.nuevos_datos}")
                 except Exception as e:
                     print(f"Error al crear el archivo JSON: {e}")
 
