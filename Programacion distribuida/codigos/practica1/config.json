@@ -1,77 +1,17 @@
 [
     {
-        "nombre": ".RData",
-        "ttl": 3,
-        "publish": false
-    },
-    {
-        "nombre": ".Rhistory",
-        "ttl": 5,
-        "publish": true
-    },
-    {
-        "nombre": "A copia.docx",
-        "ttl": 7,
-        "publish": false
-    },
-    {
-        "nombre": "A.docx",
-        "ttl": 7,
-        "publish": true
-    },
-    {
-        "nombre": "Carta de motivos personales Ivonne Perez Flores.docx",
-        "ttl": 9,
-        "publish": true
-    },
-    {
-        "nombre": "desktop.ini",
-        "ttl": 25,
-        "publish": true
-    },
-    {
-        "nombre": "Practica1-Maquinas de aprendizaje.docx",
-        "ttl": 78,
-        "publish": true
-    },
-    {
-        "nombre": "proxy.txt",
-        "ttl": 29,
-        "publish": true
-    },
-    {
-        "nombre": "Simulación de la navegación de un robot móvil autónomo en un laberinto usando sensores de distancia - Ivonne Perez Flores.docx",
-        "ttl": 19,
-        "publish": true
-    },
-    {
-        "nombre": "Simulación de la navegación de un robot móvil autónomo en un laberinto usando sensores de distancia - Ivonne Perez Flores.pdf",
-        "ttl": 49,
-        "publish": false
-    },
-    {
-        "nombre": "Simulación de la navegación de un robot móvil autónomo en un laberinto usando sensores de distancia.docx",
-        "ttl": 89,
-        "publish": false
-    },
-    {
-        "nombre": "Simulación de un robot móvil autónomo terrestre evasor de obstáculos.pdf",
-        "ttl": 23,
-        "publish": false
-    },
-    {
-        "nombre": "student-mat.csv",
-        "ttl": 49,
-        "publish": false
-    },
-    {
-        "nombre": "usedcars.csv",
-        "ttl": 19,
-        "publish": false
-    },
-    {
-        "nombre": "wisc_bc_data.csv",
+        "nombre": "analisisDatosR_II.pdf",
         "ttl": 34,
+        "publish": true
+    },
+    {
+        "nombre": "filtrarResumirDatos_III.pdf",
+        "ttl": 98,
         "publish": false
+    },
+    {
+        "nombre": "gestionComprensionDeDatos_II.pdf",
+        "ttl": 44,
+        "publish": true
     }
 ]
