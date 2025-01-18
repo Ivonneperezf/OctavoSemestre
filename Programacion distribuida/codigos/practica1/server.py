@@ -94,7 +94,9 @@ class Server:
 
                         if datos_a_guardar:
                             self.obtenerDatosDeUsuario(datos_a_guardar)
-                            datos_existentes.extend(self.nuevos_datos)
+                            for nuevo_dato in self.nuevos_datos:
+                                if not any(dato["nombre"] == nuevo_dato["nombre"] for dato in datos_existentes):
+                                    datos_existentes.append(nuevo_dato)
                             logging.info(f"Archivos agregados: {datos_a_guardar}")
                             print("Se agregaron nuevos archivos al archivo de configuracion")
                         
