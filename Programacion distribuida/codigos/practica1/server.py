@@ -11,10 +11,11 @@ class Server:
         self.archivo = []
         self.contenido = []
         self.nuevos_datos = []
+        self.ruta_salida = "config.json"
         #Inicializacion de socket
-        self.serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.host=socket.gethostname()
-        self.port=9999
+        self.port=50000
         # Configuración del logger
         logging.basicConfig(
             filename="historial.log",
@@ -29,12 +30,12 @@ class Server:
         try:
             contenido_bruto = os.listdir(self.ruta)
             self.contenido = [archivo for archivo in contenido_bruto if '.' in archivo]
-            logging.info(f"Archivos obtenidos desde la ruta: {self.ruta}")
+            logging.info(f"Archivos obtenidos desde la ruta: {self.ruta}\n")
         except FileNotFoundError:
-            print("La ruta proporcionada no es válida. Intente nuevamente.")
+            print("La ruta proporcionada no es válida. Intente nuevamente.\n")
             logging.error(f"Ruta no válida proporcionada: {self.ruta}")
         except PermissionError:
-            print("No tiene permiso para acceder a esta ruta.")
+            print("No tiene permiso para acceder a esta ruta.\n")
             logging.error(f"Permiso denegado para acceder a la ruta: {self.ruta}")
 
     def getContenido(self):
@@ -49,9 +50,8 @@ class Server:
             except ValueError:
                 print("Valor inválido para ttl, se asignará el valor predeterminado de 3600.")
                 ttl = 3600
-            publish = input(f"¿Desea publicar el archivo '{archivo}'? (si/no): ").strip().lower()
-            publish = True if publish == 'si' else False
-
+            publish = input(f"¿Desea publicar el archivo '{archivo}'? (S/N): ").strip().lower()
+            publish = True if publish == 's' or publish == 'S' else False
             self.nuevos_datos.append({
                 "nombre": archivo,
                 "ttl": ttl,
@@ -61,10 +61,9 @@ class Server:
     def guardarEnJson(self):
         while True:
             self.getContenido()
-            ruta_salida = "config.json"
-            if os.path.exists(ruta_salida):
+            if os.path.exists(self.ruta_salida):
                 try:
-                    with open(ruta_salida, "r", encoding="utf-8") as archivo_json:
+                    with open(self.ruta_salida, "r", encoding="utf-8") as archivo_json:
                         datos_existentes = json.load(archivo_json)
                         nombres_existentes = {item["nombre"] for item in datos_existentes}
                         datos_a_guardar = []
@@ -77,37 +76,46 @@ class Server:
                         datos_eliminados = [
                             item["nombre"] for item in datos_existentes if item["nombre"] not in self.contenido
                         ]
-                        print("-----------", datos_eliminados)
                         datos_existentes = [
                             item for item in datos_existentes if item["nombre"] in self.contenido
                         ]
 
                         if datos_a_guardar:
-                            print(datos_a_guardar)
                             self.obtenerDatosDeUsuario(datos_a_guardar)
                             datos_existentes.extend(self.nuevos_datos)
                             logging.info(f"Archivos agregados: {datos_a_guardar}")
+                            print("Se agregaron nuevos archivos al archivo de configuracion")
                         
                         if datos_eliminados:
                             logging.info(f"Archivos eliminados: {datos_eliminados}")
+                            print("Se eliminaron archivos en el archivo de configuracion")
 
-                    with open(ruta_salida, "w", encoding="utf-8") as archivo_json:
+                    with open(self.ruta_salida, "w", encoding="utf-8") as archivo_json:
                         json.dump(datos_existentes, archivo_json, ensure_ascii=False, indent=4)
-                    print(f"Datos actualizados en {ruta_salida}.")
                 except Exception as e:
                     print(f"Error al leer o actualizar el archivo JSON: {e}")
                     logging.error(f"Error al actualizar el archivo JSON: {e}")
             else:
                 self.obtenerDatosDeUsuario(self.contenido)
                 try:
-                    with open(ruta_salida, "w", encoding="utf-8") as archivo_json:
+                    with open(self.ruta_salida, "w", encoding="utf-8") as archivo_json:
                         json.dump(self.nuevos_datos, archivo_json, ensure_ascii=False, indent=4)
                     logging.info(f"Archivo JSON creado con los datos iniciales: {self.nuevos_datos}")
+                    print("Se guardaron nuevos archivos en la ruta especificada")
                 except Exception as e:
                     print(f"Error al crear el archivo JSON: {e}")
 
             print("Esperando 5 minutos para la próxima actualización...")
             time.sleep(60)  # Esperar 5 minutos (300 segundos)
+
+    def iniciar_socket_udp(self):
+        print(f"Iniciando socket UDP en el puerto {self.port}...")
+        self.udp_socket.bind(("0.0.0.0", self.port))
+        # while True:
+        #     data, addr = self.udp_socket.recvfrom(1024)
+        #     mensaje = data.decode("utf-8")
+        #     logging.info(f"Mensaje recibido desde {addr}: {mensaje}")
+        #     print(f"Mensaje recibido desde {addr}: {mensaje}")
 
 def main():
     server = Server()
@@ -120,6 +128,11 @@ def main():
     # Crear el hilo para guardar en JSON
     hilo_guardar_json = threading.Thread(target=server.guardarEnJson)
     hilo_guardar_json.start()
+
+    # Crear el hilo para iniciar el socket UDP
+    hilo_socket_udp = threading.Thread(target=server.iniciar_socket_udp)
+    hilo_socket_udp.daemon = True  # Permitir que el programa termine incluso si el hilo sigue activo
+    hilo_socket_udp.start()
 
 if __name__ == "__main__":
     main()
