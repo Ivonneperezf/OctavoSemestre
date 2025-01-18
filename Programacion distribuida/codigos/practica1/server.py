@@ -22,6 +22,7 @@ class Server:
             format="%(asctime)s - %(levelname)s - %(message)s",
             datefmt="%Y-%m-%d %H:%M:%S"
         )
+        self.evento_ruta_completa = threading.Event()
     
     def leerRuta(self):
         while True:  # Bucle para permitir reintentos en caso de ruta incorrecta
@@ -45,6 +46,7 @@ class Server:
                     print(f"Error inesperado al intentar acceder a la ruta: {e}\n")
                     logging.error(f"Error inesperado al intentar acceder a la ruta: {e}")
                     break  
+        self.evento_ruta_completa.set()
 
 
     def getContenido(self):
@@ -68,6 +70,7 @@ class Server:
             })
 
     def guardarEnJson(self):
+        self.evento_ruta_completa.wait()
         while True:
             self.getContenido()
             if os.path.exists(self.ruta_salida):
