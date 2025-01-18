@@ -1,0 +1,4 @@
+2025-01-18 11:23:13 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-18 11:23:21 - INFO - Archivo JSON creado con los datos iniciales: [{'nombre': 'analisisDatosR_II.pdf', 'ttl': 23, 'publish': True}, {'nombre': 'filtrarResumirDatos_III.pdf', 'ttl': 58, 'publish': False}, {'nombre': 'gestionComprensionDeDatos_II.pdf', 'ttl': 26, 'publish': False}]
+2025-01-18 11:24:31 - INFO - Archivos agregados: ['Nuevo Documento de texto.txt']
+2025-01-18 11:25:31 - INFO - Archivos eliminados: ['Nuevo Documento de texto.txt']

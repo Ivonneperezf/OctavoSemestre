@@ -73,13 +73,13 @@ class Server:
                             if archivo not in nombres_existentes:
                                 datos_a_guardar.append(archivo)
 
-                        datos_existentes = [
-                            item for item in datos_existentes if item["nombre"] in self.contenido
-                        ]
-
-                         # Filtrar archivos que ya no están en el sistema
+                        # Filtrar archivos que ya no están en el sistema
                         datos_eliminados = [
                             item["nombre"] for item in datos_existentes if item["nombre"] not in self.contenido
+                        ]
+                        print("-----------", datos_eliminados)
+                        datos_existentes = [
+                            item for item in datos_existentes if item["nombre"] in self.contenido
                         ]
 
                         if datos_a_guardar:
