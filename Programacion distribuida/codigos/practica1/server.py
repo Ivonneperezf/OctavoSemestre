@@ -29,7 +29,7 @@ class Server:
             self.ruta = input()
             if not os.path.isdir(self.ruta):  # Verifica si la ruta es un directorio válido
                 print("La ruta proporcionada no es válida. Intente nuevamente.\n")
-                logging.error(f"Ruta no válida proporcionada: {self.ruta}")
+                logging.error(f"Ruta no valida proporcionada: {self.ruta}")
             else:
                 try:
                     contenido_bruto = os.listdir(self.ruta)
