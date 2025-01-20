@@ -131,6 +131,9 @@ class Server:
             mensaje = data.decode("utf-8")
             #logging.info(f"Mensaje recibido desde {addr}: {mensaje}")
             print(f"Mensaje recibido desde {addr}: {mensaje}")
+            respuesta = "Mensaje recibido correctamente"
+            udp_socket.sendto(respuesta.encode("utf-8"), addr)
+            print(f"Respuesta enviada a {addr}")
             time.sleep(30)
 
 def main():
