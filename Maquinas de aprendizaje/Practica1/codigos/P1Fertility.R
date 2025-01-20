@@ -159,6 +159,8 @@ test_data <- scaled_data[-index, ]
 test_labels <- labels[-index]
 test_provinces <- province_names[-index]
 
+table(train_labels)
+table(test_labels)
 
 #Entrena el modelo con diferentes valores de k y guarda el porcentaje de error 
 #en el vector error
@@ -196,7 +198,7 @@ cat("Precisión (Accuracy):", accuracy * 100, "%")
 scaled_data_2 <- scale(fertility_measures[, c("examination", "education", "catholic", "infant..mortality")])
 labels_2 <- as.factor(fertility_measures$fertility_category)
 province_names_2 <- fertility_measures$x  
-View(scaled_data_2)
+#View(scaled_data_2)
 
 index_2 <- createDataPartition(labels_2, p = 0.75, list = FALSE)
 
@@ -207,6 +209,9 @@ train_provinces_2 <- province_names_2[index_2]
 test_data_2 <- scaled_data_2[-index_2, ]
 test_labels_2 <- labels_2[-index_2]
 test_provinces_2 <- province_names_2[-index_2]
+
+table(train_labels_2)
+table(test_labels_2)
 
 error_2 <- c()
 #Entrena el modelo con diferentes valores de k y guarda el porcentaje de error 
@@ -220,7 +225,7 @@ ggplot(data = data.frame(error_2), aes(x = 1:15, y = error_2)) +
   geom_line(color = "Blue")
 
 #Evaluar con k=5
-knn.fit_2 <- knn(train = train_data_2, test = test_data_2, cl = train_labels_2, k = 5)
+knn.fit_2 <- knn(train = train_data_2, test = test_data_2, cl = train_labels_2, k = 3)
 class_comparison_2 <- data.frame(PredictedFertilityCategory = knn.fit_2, ObservedFertilityCategory = test_labels_2)
 
 #Evaluamos los resultados

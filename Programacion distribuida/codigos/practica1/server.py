@@ -11,10 +11,6 @@ class Server:
         self.contenido = []
         self.nuevos_datos = []
         self.ruta_salida = "config.json"
-        #Inicializacion de socket
-        self.udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.host=socket.gethostname()
-        self.port=50000
         # Configuración del logger
         logging.basicConfig(
             filename="historial.log",
@@ -120,35 +116,38 @@ class Server:
                     print(f"Error al crear el archivo JSON: {e}")
 
             print("Esperando 5 minutos para la próxima actualización...")
-            time.sleep(60)  # Esperar 5 minutos (300 segundos)
+            time.sleep(300)  # Esperar 5 minutos (300 segundos)
 
     def iniciar_socket_udp(self):
-        print(f"Iniciando socket UDP en el puerto {self.port}...")
-        self.udp_socket.bind(("0.0.0.0", self.port))
+        #Inicializacion de socket
+        udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        host=socket.gethostname()
+        port=50000
+        print(f"Iniciando socket UDP en el puerto {port}...")
+        udp_socket.bind(("0.0.0.0", port))
         while True:
             print("El socket servidor esta activo")
+            data, addr = udp_socket.recvfrom(1024)
+            mensaje = data.decode("utf-8")
+            #logging.info(f"Mensaje recibido desde {addr}: {mensaje}")
+            print(f"Mensaje recibido desde {addr}: {mensaje}")
             time.sleep(30)
-        #     data, addr = self.udp_socket.recvfrom(1024)
-        #     mensaje = data.decode("utf-8")
-        #     logging.info(f"Mensaje recibido desde {addr}: {mensaje}")
-        #     print(f"Mensaje recibido desde {addr}: {mensaje}")
 
 def main():
     server = Server()
-
-    # Crear el hilo para leer la ruta
-    hilo_leer_ruta = threading.Thread(target=server.leerRuta)
-    hilo_leer_ruta.start()
-    hilo_leer_ruta.join()  # Asegurarse de que termine antes de iniciar el hilo de guardar JSON
-
-    # Crear el hilo para guardar en JSON
-    hilo_guardar_json = threading.Thread(target=server.guardarEnJson)
-    hilo_guardar_json.start()
 
     # Crear el hilo para iniciar el socket UDP
     hilo_socket_udp = threading.Thread(target=server.iniciar_socket_udp)
     hilo_socket_udp.daemon = True  # Permitir que el programa termine incluso si el hilo sigue activo
     hilo_socket_udp.start()
+    # Crear el hilo para leer la ruta
+    hilo_leer_ruta = threading.Thread(target=server.leerRuta)
+    hilo_leer_ruta.start()
+    #hilo_leer_ruta.join()  # Asegurarse de que termine antes de iniciar el hilo de guardar JSON
+
+    # Crear el hilo para guardar en JSON
+    hilo_guardar_json = threading.Thread(target=server.guardarEnJson)
+    hilo_guardar_json.start()
 
 if __name__ == "__main__":
     main()
