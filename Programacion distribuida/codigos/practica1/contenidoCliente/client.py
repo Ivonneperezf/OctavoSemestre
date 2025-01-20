@@ -9,8 +9,9 @@ class Client:
     def establecerConexion(self):
         self.s.connect((self.host,self.port))
         self.s.send('Hola, se establecio la comunicacion'.encode())
-        data, addr = self.s.recvfrom(1024)  # Escuchar respuesta
-        print(f"Respuesta del servidor: {data.decode('utf-8')}")
+        while True:
+            data, addr = self.s.recvfrom(1024)  # Escuchar respuesta
+            print(f"Respuesta del servidor: {data.decode('utf-8')}")
     
 
 def main():
