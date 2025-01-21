@@ -67,3 +67,11 @@
 2025-01-20 20:38:18 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60993)
 2025-01-20 20:38:48 - INFO - Archivos agregados: [{'nombre': 'Nuevo Documento de texto (2).txt', 'ttl': 34, 'publish': True}]
 2025-01-20 20:39:48 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60993)
+2025-01-20 20:40:42 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60850)
+2025-01-20 20:40:46 - INFO - Archivos agregados: [{'nombre': 'Nuevo Documento de texto (3).txt', 'ttl': 23, 'publish': True}]
+2025-01-20 21:09:27 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 64792)
+2025-01-20 21:09:57 - INFO - Archivos agregados: [{'nombre': 'Nuevo Documento de texto (4).txt', 'ttl': 2443, 'publish': True}]
+2025-01-20 21:11:57 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 64792)
+2025-01-20 21:12:27 - INFO - Archivos agregados: [{'nombre': 'Nuevo Documento de texto (5).txt', 'ttl': 7232, 'publish': False}]
+2025-01-20 21:26:59 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Haciendo Ciencia Otonio 2024\Ultima entrega por ('192.168.56.1', 64985)
+2025-01-20 21:28:29 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\Haciendo Ciencia Otonio 2024\Ultima entrega

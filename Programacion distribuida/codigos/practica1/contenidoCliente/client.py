@@ -1,5 +1,6 @@
 import socket
 import json
+import time
 
 class Client:
     def __init__(self):
@@ -58,6 +59,7 @@ class Client:
                     #print(f"Respuesta del servidor: {data.decode('utf-8')}")
                 except socket.timeout:
                     print("El servidor no respondió. Intente nuevamente.")
+                #time.sleep(10)
         except ConnectionRefusedError:
             print("No se pudo establecer conexión con el servidor. Verifique si está en ejecución.")
         except Exception as e:

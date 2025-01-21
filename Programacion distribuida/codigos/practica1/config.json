@@ -32,6 +32,26 @@
                 "nombre": "Nuevo Documento de texto (3).txt",
                 "ttl": 23,
                 "publish": true
+            },
+            {
+                "nombre": "Nuevo Documento de texto (4).txt",
+                "ttl": 2443,
+                "publish": true
+            },
+            {
+                "nombre": "Nuevo Documento de texto (5).txt",
+                "ttl": 7232,
+                "publish": false
+            }
+        ]
+    },
+    {
+        "ruta": "C:\\Users\\Bobe\\Documents\\Haciendo Ciencia Otonio 2024\\Ultima entrega",
+        "archivos": [
+            {
+                "nombre": "Papeles.rar",
+                "ttl": 35,
+                "publish": true
             }
         ]
     }
