@@ -1,17 +1,38 @@
 [
     {
-        "nombre": "analisisDatosR_II.pdf",
-        "ttl": 2434,
-        "publish": true
-    },
-    {
-        "nombre": "filtrarResumirDatos_III.pdf",
-        "ttl": 8565,
-        "publish": false
-    },
-    {
-        "nombre": "gestionComprensionDeDatos_II.pdf",
-        "ttl": 1367,
-        "publish": true
+        "addr": "192.168.56.1",
+        "ruta": "C:\\Users\\Bobe\\Documents\\Octavo Semestre\\Maquinas de aprendizaje",
+        "archivos": [
+            {
+                "nombre": "Nuevo Documento de texto.txt",
+                "ttl": 34,
+                "publish": true
+            },
+            {
+                "nombre": "analisisDatosR_II.pdf",
+                "ttl": 232,
+                "publish": true
+            },
+            {
+                "nombre": "filtrarResumirDatos_III.pdf",
+                "ttl": 133,
+                "publish": false
+            },
+            {
+                "nombre": "gestionComprensionDeDatos_II.pdf",
+                "ttl": 332,
+                "publish": true
+            },
+            {
+                "nombre": "Nuevo Documento de texto (2).txt",
+                "ttl": 34,
+                "publish": true
+            },
+            {
+                "nombre": "Nuevo Documento de texto (3).txt",
+                "ttl": 23,
+                "publish": true
+            }
+        ]
     }
 ]
