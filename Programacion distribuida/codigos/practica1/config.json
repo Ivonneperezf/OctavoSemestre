@@ -54,5 +54,100 @@
                 "publish": true
             }
         ]
+    },
+    {
+        "ruta": "C:\\Users\\Bobe\\Documents\\CodigosR",
+        "archivos": [
+            {
+                "nombre": "Estructura_iterativa.R",
+                "ttl": 23,
+                "publish": true
+            },
+            {
+                "nombre": "operaciones_con_matrices.R",
+                "ttl": 56,
+                "publish": false
+            },
+            {
+                "nombre": "primerArch.R",
+                "ttl": 823,
+                "publish": true
+            },
+            {
+                "nombre": "vectores.R",
+                "ttl": 872,
+                "publish": true
+            }
+        ]
+    },
+    {
+        "ruta": "C:\\Users\\Bobe\\Documents\\Octavo Semestre\\Maquinas de aprendizaje\\Apuntes de mineria\\Regresion Lineal",
+        "archivos": [
+            {
+                "nombre": "coffee exp.R",
+                "ttl": 12,
+                "publish": false
+            },
+            {
+                "nombre": "Regresionmlr.R",
+                "ttl": 3600,
+                "publish": true
+            }
+        ]
+    },
+    {
+        "ruta": "C:\\Users\\Bobe\\Documents\\Octavo Semestre\\Programacion distribuida\\codigos\\sockets\\python",
+        "archivos": [
+            {
+                "nombre": "client.py",
+                "ttl": 223,
+                "publish": true
+            },
+            {
+                "nombre": "client2.py",
+                "ttl": 678,
+                "publish": false
+            },
+            {
+                "nombre": "mytext.txt",
+                "ttl": 4534,
+                "publish": true
+            },
+            {
+                "nombre": "received.txt",
+                "ttl": 342,
+                "publish": true
+            },
+            {
+                "nombre": "server.py",
+                "ttl": 1232,
+                "publish": true
+            },
+            {
+                "nombre": "server2.py",
+                "ttl": 566,
+                "publish": false
+            }
+        ]
+    },
+    {
+        "ruta": "C:\\Users\\Bobe\\Pictures\\Fondos",
+        "archivos": [
+            {
+                "nombre": "fondo.jpg",
+                "ttl": 342,
+                "publish": true
+            },
+            {
+                "nombre": "Fondo1.png",
+                "ttl": 9785,
+                "publish": true
+            },
+            {
+                "nombre": "FondoPc.jpg",
+                "ttl": 987,
+                "publish": true
+            }
+        ]
     }
 ]

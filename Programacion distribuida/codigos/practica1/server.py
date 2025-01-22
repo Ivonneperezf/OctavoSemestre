@@ -251,9 +251,14 @@ class Server:
         port=50000
         print(f"Iniciando socket UDP en el puerto {port}...")
         udp_socket.bind(("0.0.0.0", port))
+        clientes_conectados = set()
         while True:
             data, addr = udp_socket.recvfrom(2048)  # Incrementar tamaño si es necesario
             mensaje = json.loads(data.decode("utf-8"))
+            print(mensaje)
+            if addr not in clientes_conectados:
+                clientes_conectados.add(addr)
+            print(f"Nuevo cliente conectado desde {addr[0]}:{addr[1]}")
             
             if "addr" in mensaje:  # Guardar datos de archivos
                 self.guardarEnJsonCliente(mensaje)

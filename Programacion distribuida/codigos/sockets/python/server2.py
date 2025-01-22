@@ -2,7 +2,7 @@ import socket
 port = 60000
 s = socket.socket()
 host = socket.gethostname()
-s.bind((host, port))
+s.bind(("0.0.0.0", port))
 s.listen(15)
 print('Server listening....')
 while True:

@@ -8,7 +8,7 @@ serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host=socket.gethostname() #Insertar direccion IP para server que esten en otra maquina
 port=9999
 #bind to teh port
-serversocket.bind((host,port))
+serversocket.bind(("0.0.0.0",port))
 #queue up to 5 requests
 serversocket.listen(5)
 #establish a connection
