@@ -149,5 +149,40 @@
                 "publish": true
             }
         ]
+    },
+    {
+        "ruta": "C:\\Users\\Bobe\\Pictures\\Camera Roll",
+        "archivos": [
+            {
+                "nombre": "desktop.ini",
+                "ttl": 200,
+                "publish": true
+            },
+            {
+                "nombre": "WIN_20240816_20_31_40_Pro.jpg",
+                "ttl": 100,
+                "publish": false
+            },
+            {
+                "nombre": "WIN_20240816_20_31_49_Pro.jpg",
+                "ttl": 100,
+                "publish": true
+            }
+        ]
+    },
+    {
+        "ruta": "C:\\Users\\Bobe\\Pictures",
+        "archivos": [
+            {
+                "nombre": "desktop.ini",
+                "ttl": 357,
+                "publish": true
+            },
+            {
+                "nombre": "logo.png",
+                "ttl": 8763,
+                "publish": false
+            }
+        ]
     }
 ]

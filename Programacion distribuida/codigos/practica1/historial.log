@@ -86,3 +86,7 @@
 2025-01-21 20:29:11 - ERROR - Ruta no válida proporcionada:  por ('192.168.0.18', 58099)
 2025-01-21 20:30:11 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Pictures\Fondos por ('192.168.0.18', 58099)
 2025-01-21 20:31:11 - INFO - Nueva ruta agregada: C:\Users\Bobe\Pictures\Fondos
+2025-01-23 18:34:04 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Pictures\Camera Roll por ('192.168.0.12', 55841)
+2025-01-23 18:34:34 - INFO - Nueva ruta agregada: C:\Users\Bobe\Pictures\Camera Roll
+2025-01-23 18:36:04 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Pictures por ('192.168.0.18', 51845)
+2025-01-23 18:37:04 - INFO - Nueva ruta agregada: C:\Users\Bobe\Pictures

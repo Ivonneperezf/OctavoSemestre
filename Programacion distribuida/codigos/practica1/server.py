@@ -7,9 +7,6 @@ import logging
 
 class Server:
     def __init__(self):
-        self.ruta = ""
-        self.contenido = []
-        self.nuevos_datos = []
         self.ruta_salida = "config.json"
         # Configuración del logger
         logging.basicConfig(
@@ -171,14 +168,9 @@ class Server:
             time.sleep(300)  # Esperar 5 minutos (300 segundos)
 
     def guardarEnJsonCliente(self, mensaje_completo):
-        #self.evento_ruta_completa.wait()  # Esperar hasta que el evento se active
         with self.lock:
-        #while True:
-            # Obtener contenido (se puede adaptar según sea necesario)
             self.getContenido(mensaje_completo["ruta"])
-
             if os.path.exists(self.ruta_salida):
-                
                     try:
                         # Abrir el archivo JSON para leer los datos existentes
                         with open(self.ruta_salida, "r", encoding="utf-8") as archivo_json:
@@ -242,7 +234,6 @@ class Server:
                     logging.error(f"Error al crear el archivo JSON: {e}")
 
             print("Esperando 5 minutos para la próxima actualización...")
-            #time.sleep(30)  # Esperar 5 minutos (300 segundos)
 
     def iniciar_socket_udp(self):
         #Inicializacion de socket
@@ -267,7 +258,7 @@ class Server:
                 ruta = mensaje["ruta"]
                 validacion = self.validarRuta(ruta, addr)
                 udp_socket.sendto(json.dumps(validacion).encode("utf-8"), addr)
-            time.sleep(30)
+            time.sleep(300)
 
 def main():
     server = Server()
