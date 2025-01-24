@@ -1,0 +1,45 @@
+- libreria sqldf (Para cargar bases de datos)
+- sqldf(Consultas a bases SQL)
+- subset (Funcion nativa de R, sirve para consultas e incluso se pueden seleccionar columnas adecuadas,
+	se puede pasar también como vector)
+- identical(Para revisar si dos funciones son iguales)
+----------------------------------------------------------------------
+MANERA MAS EFICIENTE (dplyr)
+- segunda generación de plyr es dplyr (Usa C++ para mejorar la velocidad)
+- Usando str(select(filter(hflights, Dest == 'BNA'), DepTime:ArrTime)) selecciona columna y hace la consulta
+- filter funciona con data.frame y data.table, los nombres ed las filas no se conservan
+-------------------------------------------------------------------------
+USANDO (data.table)
+- La sintaxis de data.table se parece mucho a la de sql
+- En data.table el primer argumento (i) del operador [.data.table representa el filtrado en el segundo 
+	argumento (j) podemos seleccionar columnas
+- Se puede pasar como vector de caracteres y establecer con false.
+------------------------------------------------------------------------
+FUNCION DE AGREGACION
+- agregate aplica una función a un conjunto con datos categóricos
+- Se puede simplicar con with, donde solo hace falta especificar una vez el data.frame
+- Podemos agregar nombres a columnas con notación de formula usando ~
+-------------------------------------------------------------------------
+AGREGACION EFICIENTE CON COMANDOS BASE DE R
+- tapply o by se puede aplicar a una matriz irregular una función, solo que devuelve un objeto arreglo que se debe
+	convertir a data.frame
+----------------------------------------------------------------------------
+FUNCIONES DE AYUDA
+- El paquete plyr nos da funciones para a data.frame, listas y arreglos y devuelve en el formato mencionado
+- La función ddply es mas rápido que la función aggregate
+---------------------------------------------------------------------------
+FUNCIONES AUXILIARES DE ALTO RENDIMIENTO
+- La función group_by hace los grupos como agregate, y los guarda en un atributo del data.frame, se usa para
+	aplicar dplyr::summarise para hacer lo mismo que aggregate
+--------------------------------------------------------------------------
+AGGREGATE CON DATA.TABLE
+- Se puede hacer la función directamente en el data.frame y aplicar la función mean, solo que se tiene que 
+	ordenar usando una llave setkey.
+--------------------------------------------------------------------------------
+BENCHMARKS
+- Se pueden agregar las funciones y evaluar la mas eficiente
+- Las librerías dplyr y data.table son las mas eficientes y se pueden convinar, estas son para calcular
+	promedios en los grupos
+------------------------------------------------------------------------------------
+- Estas funciones también se pueden aplicar a distintas funciones como para sumar
+- plyr ya tiene una funxion para contabilizar los registros (count)

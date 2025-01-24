@@ -1,0 +1,22 @@
+La fase de limpieza de datos sigue algunos puntos importantes:un proceso estructurado llamado resumir-corregir-convertir-adaptar
+-----------------------------------------------------------------------
+Seguiremos un enfoque estructurado de cuatro pasos al que los autoresdenominan resumir-corregir-convertir-adapta
+----------------------------------------------------------------------
+1) RESUMEN MEDIANTE LA FUNCION STR
+Las partes interesadas clave obtienen información de los datos para tomar decisiones informadas.
+2) Inspección e interpretación de los resultado. Con str ves un pococ de su inseccion, dim(), head(), tail(), son funciones para ver partes del dataset
+3)Búsqueda y reparación de datos defectuosos.  El siguiente paso en el enfoque SFCA resumir-corregir-convertir-adaptar
+es corregir cualquier defecto que pueda afectar tu análisis
+4) Búsqueda de defectos en los conjuntos de datos. No existe una única mejor manera de encontrar defectos en los datos. Esta actividad requiere arte combinado con algunos métodos computacionales
+5) Valores faltantes. Se debe de asegurar cuantos valores faltantes hay con is.na() y se pueden eliminar e imputar.
+	Al ejecutar la función str_detect() se buscarán todos los valores de la cadena NA en el frame de
+datos de la bicicleta
+6) Valores erróneos, se pueden pasar los elementos de bad_data a la función
+str_detect() asignará la posición de fila de x61 a location
+7) Corrección de errores en conjuntos de datos. Podemos reemplazar para imputación o eliminar las filas
+8) Conversión de entradas a tipos de datos adecuados para el análisis, debemos asegurarnos que el tipo sea consistente con su futuro análisis, existen distintos tipos de daos para esto
+9) Adaptación de variables de cadena a un estándar. Esto puede ser persnalizado y puede clasificarse como factor
+10) Datos listos para el análisis. Ya con datos limpios 
+
+
+

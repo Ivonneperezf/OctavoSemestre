@@ -1,0 +1,26 @@
+ETL (ESTRACCION, TRANSFORMACION Y CARGA)
+función tibble(), ayuda a crear vectores en el dataframe.
+
+ES POSIBLE PERSONALIZAR EL PROCESO PARA LA PREPARACION DE DATOS
+1. EDA Histograma, Sactter
+2. Limpieza str(), dim(), head(), tail(), is.na()
+3. Filtrar y resumen [], dplyr, plyr
+4. EDA
+-------------------------------------------------------------------------
+PRIMERO CONOCEMOS LOS DATOS
+Variables, categoricas  numericas
+
+Las variables categoricas se dividen en nominales y ordinales
+
+Las nominales suelen venir n 1 y 0, podemos pasarlo en no numeric para si o no
+Las ordinales se dividen en varias
+
+NUMRICAS
+discretas o cuntinuas. Discretas son as enteras, continuas pues continuas
+
+REVISAR CON EL ANALISIS EXPLORATORIO
+utilizar varios tipos de analisis e varibles es fundamental para cada variable.
+SUMMMARY()-Estadisticas l analisis univariable (valores de cuartiles)
+
+
+Los valores atipicos ueden erse tratados con la mediana

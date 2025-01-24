@@ -1,0 +1,158 @@
+El análisis exploratorio de datos implica examinar conjunto de datos para descubrir características subyacientes.
+- Una pregunta o hipótesis aguda puede servir como una herramienta de reducción de dimensión que puede eliminar variables que no son inmediatamente relevantes para la pregunta.
+-  Un objetivo clave en la inteligencia de negocios es proporcionar respuestas, a través de modelos, a la pregunta.
+-  Los datos pueden ser de diferentes tipos, y cada tipo tiene ciertas estadísticas asociadas a ellos, denominadas escalas de medición.
+-El comité de la Asociación Británica para el Avance de la Ciencia ideó cuatro tipos de escalas de medición: nominal, ordinal, de intervalo y de razón.
+
+ 	- nominal: Puedes calcular el recuento (count) y la moda (mode) de los datos de escala nominal.
+	- ordinal: Puedes calcular la mediana y los percentiles de datos de escala ordinal cuando se representan numéricamente.
+	- intervalo: Puedes calcular la media y la desviación estándar de los datos de la escala de intervalo.
+	- proporción (ratio): Es una combinación de otros dos números expresados como número racional.
+
+TIPOS DE DATO EN R
+	- Numérico (numeric): Un número con un valor decimal 
+	- Entero (integer): Un número sin valor decimal
+	- Carácter (character): Una representación de un valor de cadena 
+	- Lógico (logical): Un valor almacenado como TRUE o FALSE. 
+	- Factor: Un factor se aplica a variables categóricas, tanto nominales como ordinales. 
+Si deseas determinar en qué tipo de datos está almacenada tu variable, puedes aplicar la 
+función class() a la variable. 
+
+EXPLORACION TABULAR
+Datos univariados. Al examinar datos univariados, puedes describir la distribución de los datos en términos de su valor y extensión, se usa la funcon str().
+- La función summary() produce un resumen de cinco números (más la media) para las variables continuas. También produce un recuento de las variables categóricas:
+	• Mínimo (minimum): Esta es la observación más pequeña en el conjunto de datos.
+	• Primer cuartil (first quartile): El 25 % de los datos se encuentra por debajo de este valor.
+	• Mediana (median): Esta es la observación del medio.
+	• Media (mean): El promedio de las observaciones.
+	• Tercer cuartil (third quartile): El 75 % de los datos se encuentra por debajo de este valor.
+	• Máximo (maximum): Esta es la observación más grande en el conjunto de datos.
+Si solo deseas el resumen de cinco números, puede utilizar la función fivenum().
+
+(desviación estándar y varianza) utilizando las funciones sd() y var() respectivamente.
+
+EXPLORACION GRAFICA
+-Para poder ver un histograma simple usamos la función plot(), muchas veces se usan con variables categóricas.
+-También podemos ver esta información por medio de un diagrama de caja (boxplot)
+	- El bigote superior representa el que sea menor:
+		• (a), el valor máximo
+		• (b), el valor del cuartil superior, (243.10) + (1.5 x IQR), donde IQR es el rango intercuartil.
+
+Para poder ver la distribución de una variable sesgada podemos verlo con un histograma. 
+-La asimetría también es visible en el diagrama de caja, donde no hay burbujas en el bigote inferior, lo que puede ser una indicación de asimetría según los datos tabulares.
+-datos sesgados hacia la izquierda (negativos), 
+-datos distribuidos normalmente y datos sesgados hacia la derecha (positivos).
+
+Si tu conjunto de datos tiene dos variables, tienes datos bivariados. Al examinar datos 
+bivariados, deseas explorar posibles relaciones. 
+	• La función cut(): Convierte un número en un factor dividiendo los valores en una  cantidad de intervalos que elijas.
+
+
+VARIABLES BIVARIADAS
+ La función table() funciona muy bien para factores, pero no tan bien para datos numéricos. Pueden llegar a ser bastante grandes. La exploración gráfica es útil en estos casos. 
+
+• Factor/Factor: Trazarás dos factores categóricos utilizando la función mosaicplot(). Los datos primero deben colocarse en un objeto table(). 
+• Factor/Numeric: Utilizarás la función boxplot() que utilizaste anteriormente en este documento para trazar un factor categórico con una variable numérica.
+• Numeric/Numeric: Se trazan dos variables numéricas en un diagrama de dispersión utilizando la función plot(). 
+
+Ver correlación entre los dos
+En dos dimensiones, puedes responder esta pregunta rápidamente usando la función cor()
+
+• El signo será positivo (+) o negativo (-). Correlación positiva significa que a medida 
+que aumenta la primera variable, también aumenta la segunda variable. Correlación 
+negativa significa que cuando la primera variable aumenta, la segunda variable 
+disminuye. Los dos ejemplos anteriores están correlacionados positivamente.
+• El valor del resultado de la correlación varía de cero (0) a uno (1). El valor aumenta 
+a medida que aumenta la fuerza de la correlación. El primer ejemplo tiene una 
+correlación de 0.766, que es mucho más fuerte que la del segundo ejemplo (0.076). 
+Un valor de cero indica que no hay correlación entre dos variables.
+
+ Hay una prueba estadística incluida en R que te dirá si una correlación es significativa.
+Ejecuta la prueba usando la función cor.test() en las variables google_adwords y revenues:
+
+ Cuando usas cor.test() en dos 
+variables, realizas una prueba t para examinar algo llamado hipótesis nula.
+
+Una hipótesis nula normalmente representa el status quo, lo que significa que no sucede 
+nada. En nuestro ejemplo, la hipótesis nula es que la verdadera correlación entre 
+google_adwords y revenues es igual a cero. En otras palabras, las variables no tienen 
+correlación. La hipótesis alternativa es que la correlación entre ambos no es igual a cero y 
+que la correlación es significativa.
+Una prueba t aborda la pregunta: ¿qué tan sorprendente es ver este grado de correlación si 
+las dos variables realmente no están correlacionadas?
+
+En otras palabras, la probabilidad de obtener este resultado, si la hipótesis nula fuera cierta, 
+sería esencialmente cero. Por lo tanto, rechazarás la hipótesis nula afirmando que la 
+correlación es cero. Un valor típico utilizado para rechazar una hipótesis nula es un valor p 
+inferior a 0.05.
+
+Existe una percepción errónea común de que la correlación implica causalidad. Aquí hay una 
+mirada divertida a dos variables altamente correlacionadas:
+
+"""Un valor de p pequeño indica que la correlacion es significativa. El nivel comun de significancia es 0.05, si es igual o menor, se rechaza la hipotesis nula"""
+
+"""El valor t es un valor estadístico de la prueba. Indica la magnitud de la relación entre las variables en términos de la desviación estándar. Cuanto mayor sea, más fuerte es la relación."""
+
+El intervalo de confianza es muy ajustado (0.806, 0.89), lo que indica poca variación en los 
+datos. Un resultado como éste sugiere que vale la pena modelar esta relación en análisis 
+posteriores. 
+
+Hasta este punto, has estado explorando la correlación utilizando resultados tabulares. 
+También hay un papel para la exploración gráfica. El siguiente es el código para trazar tres 
+correlaciones bivariadas que ya has visto en forma tabular:
+
+"""MIENTRAS MAS DISTRIBUIDOS ESTAN LOS DATOS MENOR ES LA CORRELACION"""
+
+MULTIPLES VARIABLES SIMULTANEAMENTE
+Seguirá utilizando el enfoque de cuatro preguntas de Mirada-Relaciones-Correlación Importancia.
+escribe pairs(marketing) en tu consola #Matriz de correlación
+El resultado de pairs(marketing) es una cuadrícula de gráficos por pares que muestran la 
+relación de cada variable con las demás. L
+
+
+CORRELACION
+ puedes utilizar la función cor() en 
+el conjunto de datos. A diferencia de la función pairs(), solo puedes encontrar correlaciones 
+entre variables numéricas. Subconjunto de marketing en las primeras seis variables 
+(numéricas) y páselo a cor()
+
+ El paquete psych proporciona una 
+función corr.test() que combina la salida de cor() junto con los valores p. 
+
+Puedes ver que todas las correlaciones en la matriz de correlación son las mismas que los 
+resultados cuando llamaste a cor() en el conjunto de datos de marketing. Además, la función 
+corr.test() proporciona los valores de probabilidad (valores p) para todos los pares. 
+
+ El paquete corrgram contiene una función corrgram(), que es una versión mejorada 
+del gráfico de pares y también incorpora elementos de la función corr.test().
+
+
+Aquí está el código que produce un ‘correlograma’. Utiliza un subconjunto del conjunto de 
+datos de marketing porque las matemáticas sólo permiten valores numéricos. 
+
+Cuatro parámetros aparecen en el código. Controlan el contenido de las regiones del 
+correlograma. Estos parámetros en este ejemplo se explican a continuación:
+• Panel inferior (lower panel): La mitad inferior izquierda del gráfico se configuró 
+para mostrar coeficientes de correlación e intervalos de confianza usando panel.conf.
+• Panel superior (upper panel): La mitad superior derecha del gráfico se configuró 
+para mostrar elipses y líneas suaves usando panel.ellipse
+• Diagonal y Texto (diagonal and text): La diagonal contiene el nombre de la variable 
+y sus valores mínimo y máximo usando panel.minmax y panel.txt, respectivamente
+
+
+ tres características clave del correlograma:
+• Variables: Las variables aparecen a lo largo de la diagonal con los valores mínimo y 
+máximo de cada una
+• Elipses y línea: El panel superior (arriba a la derecha) se codificó para mostrar elipses 
+de confianza de cada par de variables.
+o Las elipses delgadas representan una fuerte correlación.
+o Las elipses más redondas representan correlaciones débiles
+o La pendiente de la línea suave representa una correlación positiva o negativa.
+• Coeficiente de correlación e intervalo de confianza: El panel inferior (abajo a 
+ la 
+izquierda) se codificó para mostrar el coeficiente de correlación y el intervalo de 
+confianza. Esto es similar a los resultados que obtienes de la función cor() o 
+corr.test().
+
+Esto reordena las variables para presentar las correlaciones más fuertes hacia la parte superior 
+izquierda, con una correlación que se debilita gradualmente hacia la parte inferior derecha
