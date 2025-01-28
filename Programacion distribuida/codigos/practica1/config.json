@@ -56,31 +56,6 @@
         ]
     },
     {
-        "ruta": "C:\\Users\\Bobe\\Documents\\CodigosR",
-        "archivos": [
-            {
-                "nombre": "Estructura_iterativa.R",
-                "ttl": 23,
-                "publish": true
-            },
-            {
-                "nombre": "operaciones_con_matrices.R",
-                "ttl": 56,
-                "publish": false
-            },
-            {
-                "nombre": "primerArch.R",
-                "ttl": 823,
-                "publish": true
-            },
-            {
-                "nombre": "vectores.R",
-                "ttl": 872,
-                "publish": true
-            }
-        ]
-    },
-    {
         "ruta": "C:\\Users\\Bobe\\Documents\\Octavo Semestre\\Maquinas de aprendizaje\\Apuntes de mineria\\Regresion Lineal",
         "archivos": [
             {
@@ -181,6 +156,65 @@
             {
                 "nombre": "logo.png",
                 "ttl": 8763,
+                "publish": false
+            }
+        ]
+    },
+    {
+        "ruta": "C:\\Users\\Bobe\\Documents\\CodigosR",
+        "archivos": [
+            {
+                "nombre": "Estructura_iterativa.R",
+                "ttl": 2234,
+                "publish": true
+            },
+            {
+                "nombre": "operaciones_con_matrices.R",
+                "ttl": 432,
+                "publish": true
+            },
+            {
+                "nombre": "primerArch.R",
+                "ttl": 9874,
+                "publish": false
+            },
+            {
+                "nombre": "vectores.R",
+                "ttl": 243,
+                "publish": true
+            }
+        ]
+    },
+
+    {
+        "path": "C:\\Users\\Bobe\\Documents\\CodigosR",
+        "ip":"192.236.34.39",
+        "files": [
+            {
+                "name": "Estructura_iterativa",
+                "extension":".R",
+                "creationDate":"02/01/2025 11:19:21 p. m.",
+                "modificationDate":"02/01/2025 11:50:05 p. m.",
+                "size":"346 KB",
+                "ttl": 9874,
+                "publish": true
+            },
+            {
+                "name": "operaciones_con_matrices",
+                "extension":".R",
+                "creationDate":"02/01/2025 11:19:21 p. m.",
+                "modificationDate":"02/01/2025 11:50:05 p. m.",
+                "size":"346 KB",
+                "ttl": 9874,
+                "publish": true
+            },
+            {
+                "name": "primerArch",
+                "extension":".R",
+                "creationDate":"02/01/2025 11:19:21 p. m.",
+                "modificationDate":"02/01/2025 11:50:05 p. m.",
+                "size":"346 KB",
+                "ttl": 9874,
                 "publish": false
             }
         ]

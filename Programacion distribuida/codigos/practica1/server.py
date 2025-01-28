@@ -91,7 +91,7 @@ class Server:
                     print(f"Error inesperado al intentar acceder a la ruta: {e}\n")
                     logging.error(f"Error inesperado al intentar acceder a la ruta: {e}")
                     break  
-        self.evento_ruta_completa.set()
+        #self.evento_ruta_completa.set()
 
 
     def getContenido(self, ruta):
@@ -115,7 +115,7 @@ class Server:
             })
 
     def guardarEnJson(self):
-        self.evento_ruta_completa.wait()
+        #self.evento_ruta_completa.wait()
         while True:
             self.getContenido()
             if os.path.exists(self.ruta_salida):
@@ -178,7 +178,7 @@ class Server:
 
                         # Verificar si la ruta ya existe en el archivo JSON
                         ruta_existente = next((item for item in datos_existentes if item["ruta"] == mensaje_completo["ruta"]), None)
-                        print(ruta_existente)
+                        #print(ruta_existente)
 
                         if ruta_existente:
                             # Si la ruta existe, verificar si hay archivos en el mensaje
@@ -234,6 +234,7 @@ class Server:
                     logging.error(f"Error al crear el archivo JSON: {e}")
 
             print("Esperando 5 minutos para la próxima actualización...")
+            #time.sleep(10)
 
     def iniciar_socket_udp(self):
         #Inicializacion de socket
@@ -242,23 +243,23 @@ class Server:
         port=50000
         print(f"Iniciando socket UDP en el puerto {port}...")
         udp_socket.bind(("0.0.0.0", port))
-        clientes_conectados = set()
+        #clientes_conectados = set()
         while True:
             data, addr = udp_socket.recvfrom(2048)  # Incrementar tamaño si es necesario
             mensaje = json.loads(data.decode("utf-8"))
-            print(mensaje)
-            if addr not in clientes_conectados:
-                clientes_conectados.add(addr)
-            print(f"Nuevo cliente conectado desde {addr[0]}:{addr[1]}")
+            #print(mensaje)
+            # if addr not in clientes_conectados:
+            #     clientes_conectados.add(addr)
+            # print(f"Nuevo cliente conectado desde {addr[0]}:{addr[1]}")
             
             if "addr" in mensaje:  # Guardar datos de archivos
-                self.guardarEnJsonCliente(mensaje)
+                #self.guardarEnJsonCliente(mensaje)
                 threading.Thread(target=self.guardarEnJsonCliente, args=(mensaje,)).start()
             elif "ruta" in mensaje:  # Validar ruta
                 ruta = mensaje["ruta"]
                 validacion = self.validarRuta(ruta, addr)
                 udp_socket.sendto(json.dumps(validacion).encode("utf-8"), addr)
-            time.sleep(300)
+            time.sleep(20)
 
 def main():
     server = Server()
