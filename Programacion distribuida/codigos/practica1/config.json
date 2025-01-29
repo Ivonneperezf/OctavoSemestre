@@ -207,15 +207,6 @@
                 "size":"346 KB",
                 "ttl": 9874,
                 "publish": true
-            },
-            {
-                "name": "primerArch",
-                "extension":".R",
-                "creationDate":"02/01/2025 11:19:21 p. m.",
-                "modificationDate":"02/01/2025 11:50:05 p. m.",
-                "size":"346 KB",
-                "ttl": 9874,
-                "publish": false
             }
         ]
     }
