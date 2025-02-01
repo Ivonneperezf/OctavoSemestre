@@ -1,0 +1,10 @@
+------PROBLEMA DE LAS N REINAS
+condiciones:
+para que las reinas se ataquen en horizontal
+Las reinas deben tener diferentes valores de y
+
+Para que las damas se ataquen en diagonal
+Para diagonales positivas:
+debe cumplirse que y1-y != x1-x
+Para diagonales negativas:
+debe cumplir se -(y1-y != x1-x)
