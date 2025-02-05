@@ -1,6 +1,6 @@
 [
     {
-        "ruta": "C:\\Users\\Bobe\\Documents\\Octavo Semestre\\Programacion distribuida\\codigos\\practica1\\contenidoCliente",
+        "path": "C:\\Users\\Bobe\\Documents\\Octavo Semestre\\Programacion distribuida\\codigos\\practica1\\contenidoCliente",
         "archivos": [
             {
                 "nombre": "client.py",

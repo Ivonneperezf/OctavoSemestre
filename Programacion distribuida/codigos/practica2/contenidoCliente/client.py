@@ -15,7 +15,7 @@ class Client:
             print("Inserte la ruta del directorio a conocer su listado:")
             ruta = input()
             while True:
-                mensaje = {"ruta": ruta}
+                mensaje = {"path": ruta}
                 self.s.sendto(json.dumps(mensaje).encode("utf-8"), (self.host, self.port))
                 try:
                     data, _ = self.s.recvfrom(2048)
@@ -45,7 +45,7 @@ class Client:
 
                                 mensaje_completo = {
                                     "addr": self.s.getpeername()[0],  # Dirección del cliente
-                                    "ruta": ruta,  # Ruta proporcionada
+                                    "path": ruta,  # Ruta proporcionada
                                     "archivos": datos_archivos  # Datos de los archivos
                                 }
 

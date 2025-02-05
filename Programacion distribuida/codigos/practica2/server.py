@@ -35,7 +35,7 @@ class Server:
                         with open(self.ruta_salida, "r", encoding="utf-8") as archivo_json:
                             datos_existentes = json.load(archivo_json)
 
-                    ruta_existente = next((item for item in datos_existentes if item["ruta"] == ruta), None)
+                    ruta_existente = next((item for item in datos_existentes if item["path"] == ruta), None)
 
                     if ruta_existente:
                         archivos_existentes = {archivo["nombre"] for archivo in ruta_existente["archivos"]}
@@ -74,7 +74,7 @@ class Server:
 
     def guardarEnJsonCliente(self, mensaje_completo):
         with self.lock:
-            self.getContenido(mensaje_completo["ruta"])
+            self.getContenido(mensaje_completo["path"])
             if os.path.exists(self.ruta_salida):
                     try:
                         # Abrir el archivo JSON para leer los datos existentes
@@ -82,7 +82,7 @@ class Server:
                             datos_existentes = json.load(archivo_json)
 
                         # Verificar si la ruta ya existe en el archivo JSON
-                        ruta_existente = next((item for item in datos_existentes if item["ruta"] == mensaje_completo["ruta"]), None)
+                        ruta_existente = next((item for item in datos_existentes if item["path"] == mensaje_completo["path"]), None)
                         #print(ruta_existente)
 
                         if ruta_existente:
@@ -106,18 +106,18 @@ class Server:
                                     print("Se agregaron nuevos archivos en la ruta especificada")
 
                             else:
-                                logging.info(f"No se encontraron archivos nuevos para la ruta: {mensaje_completo['ruta']}")
-                                print(f"No se encontraron archivos nuevos para la ruta: {mensaje_completo['ruta']}")
+                                logging.info(f"No se encontraron archivos nuevos para la ruta: {mensaje_completo['path']}")
+                                print(f"No se encontraron archivos nuevos para la ruta: {mensaje_completo['path']}")
 
                         else:
                             # Si la ruta no existe, agregarla como nueva
                             nuevo_dato = {
-                                "ruta": mensaje_completo["ruta"],
+                                "path": mensaje_completo["path"],
                                 "archivos": mensaje_completo["archivos"]
                             }
                             datos_existentes.append(nuevo_dato)
-                            logging.info(f"Nueva ruta agregada: {mensaje_completo['ruta']}")
-                            print(f"Se agregó una nueva ruta: {mensaje_completo['ruta']}")
+                            logging.info(f"Nueva ruta agregada: {mensaje_completo['path']}")
+                            print(f"Se agregó una nueva ruta: {mensaje_completo['path']}")
 
                         # Escribir los cambios en el archivo JSON
                         with open(self.ruta_salida, "w", encoding="utf-8") as archivo_json:
@@ -156,8 +156,8 @@ class Server:
             if "addr" in mensaje:  # Guardar datos de archivos
                 #self.guardarEnJsonCliente(mensaje)
                 threading.Thread(target=self.guardarEnJsonCliente, args=(mensaje,)).start()
-            elif "ruta" in mensaje:  # Validar ruta
-                ruta = mensaje["ruta"]
+            elif "path" in mensaje:  # Validar ruta
+                ruta = mensaje["path"]
                 validacion = self.validarRuta(ruta, addr)
                 udp_socket.sendto(json.dumps(validacion).encode("utf-8"), addr)
             time.sleep(20)
