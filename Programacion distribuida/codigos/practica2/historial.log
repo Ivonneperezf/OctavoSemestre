@@ -1,0 +1,122 @@
+2025-01-18 15:25:54 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-18 15:26:06 - INFO - Archivo JSON creado con los datos iniciales: [{'nombre': 'analisisDatosR_II.pdf', 'ttl': 2434, 'publish': True}, {'nombre': 'filtrarResumirDatos_III.pdf', 'ttl': 8565, 'publish': False}, {'nombre': 'gestionComprensionDeDatos_II.pdf', 'ttl': 1367, 'publish': True}]
+2025-01-18 15:30:10 - INFO - Archivos agregados: ['Nuevo Documento de texto.txt']
+2025-01-18 15:33:10 - INFO - Archivos eliminados: ['Nuevo Documento de texto.txt']
+2025-01-20 10:19:31 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-20 10:20:41 - INFO - Archivos agregados: ['Nuevo Documento de texto.txt']
+2025-01-20 10:25:43 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-20 10:25:43 - INFO - Archivos eliminados: ['Nuevo Documento de texto.txt']
+2025-01-20 10:29:32 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-20 10:33:16 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-20 10:35:29 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-20 10:51:49 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-20 10:54:48 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-20 18:04:57 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje
+2025-01-20 18:18:43 - ERROR - Error inesperado al intentar acceder a la ruta: [WinError 3] El sistema no puede encontrar la ruta especificada: '' por ('192.168.56.1', 49385)
+2025-01-20 18:19:49 - ERROR - Error inesperado al intentar acceder a la ruta: [WinError 3] El sistema no puede encontrar la ruta especificada: '' por ('192.168.56.1', 57497)
+2025-01-20 18:21:35 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 62583)
+2025-01-20 18:26:26 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Programacion distribuida\codigos\practica1 por ('192.168.56.1', 52313)
+2025-01-20 19:23:39 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60237)
+2025-01-20 19:23:51 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60237)
+2025-01-20 19:23:51 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60237)
+2025-01-20 19:24:03 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60237)
+2025-01-20 19:24:03 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60237)
+2025-01-20 19:24:15 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60237)
+2025-01-20 19:24:15 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60237)
+2025-01-20 19:29:03 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 50900)
+2025-01-20 19:29:14 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 50900)
+2025-01-20 19:29:14 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 50900)
+2025-01-20 19:31:20 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 55116)
+2025-01-20 19:33:33 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60019)
+2025-01-20 19:35:05 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 55071)
+2025-01-20 19:35:16 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 55071)
+2025-01-20 19:35:16 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 55071)
+2025-01-20 19:37:43 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 64905)
+2025-01-20 19:37:55 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 64905)
+2025-01-20 19:37:55 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 64905)
+2025-01-20 19:39:04 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 49348)
+2025-01-20 19:39:11 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 49348)
+2025-01-20 19:39:11 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 49348)
+2025-01-20 19:40:10 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 52357)
+2025-01-20 19:40:19 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 52357)
+2025-01-20 19:40:19 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 52357)
+2025-01-20 19:43:08 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 63268)
+2025-01-20 19:43:16 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 63268)
+2025-01-20 19:43:16 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 63268)
+2025-01-20 19:44:33 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 51763)
+2025-01-20 19:47:05 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 50321)
+2025-01-20 19:48:22 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 51528)
+2025-01-20 19:48:30 - ERROR - Error al actualizar el archivo JSON: 'ruta'
+2025-01-20 19:50:44 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 55702)
+2025-01-20 19:50:51 - ERROR - Error al actualizar el archivo JSON: 'ruta'
+2025-01-20 19:55:13 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 50768)
+2025-01-20 19:55:20 - ERROR - Error al actualizar el archivo JSON: 'ruta'
+2025-01-20 19:57:39 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 62450)
+2025-01-20 19:57:45 - ERROR - Error al actualizar el archivo JSON: 'ruta'
+2025-01-20 19:59:06 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 58254)
+2025-01-20 19:59:12 - INFO - Archivo JSON creado con los datos iniciales: {'addr': '192.168.56.1', 'ruta': 'C:\\Users\\Bobe\\Documents\\Octavo Semestre\\Maquinas de aprendizaje', 'archivos': [{'nombre': 'analisisDatosR_II.pdf', 'ttl': 232, 'publish': True}, {'nombre': 'filtrarResumirDatos_III.pdf', 'ttl': 543, 'publish': False}, {'nombre': 'gestionComprensionDeDatos_II.pdf', 'ttl': 213, 'publish': True}]}
+2025-01-20 20:01:34 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 61620)
+2025-01-20 20:04:44 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 59172)
+2025-01-20 20:18:25 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 51342)
+2025-01-20 20:27:09 - ERROR - Error al actualizar el archivo JSON: 
+2025-01-20 20:27:47 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 53131)
+2025-01-20 20:27:59 - INFO - Archivos agregados: [{'nombre': 'Nuevo Documento de texto.txt', 'ttl': 34, 'publish': True}]
+2025-01-20 20:27:59 - INFO - Archivos eliminados: ['analisisDatosR_II.pdf', 'filtrarResumirDatos_III.pdf', 'gestionComprensionDeDatos_II.pdf']
+2025-01-20 20:30:07 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 51294)
+2025-01-20 20:30:14 - INFO - Archivos agregados: [{'nombre': 'analisisDatosR_II.pdf', 'ttl': 232, 'publish': True}, {'nombre': 'filtrarResumirDatos_III.pdf', 'ttl': 133, 'publish': False}, {'nombre': 'gestionComprensionDeDatos_II.pdf', 'ttl': 332, 'publish': True}]
+2025-01-20 20:38:18 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60993)
+2025-01-20 20:38:48 - INFO - Archivos agregados: [{'nombre': 'Nuevo Documento de texto (2).txt', 'ttl': 34, 'publish': True}]
+2025-01-20 20:39:48 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60993)
+2025-01-20 20:40:42 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 60850)
+2025-01-20 20:40:46 - INFO - Archivos agregados: [{'nombre': 'Nuevo Documento de texto (3).txt', 'ttl': 23, 'publish': True}]
+2025-01-20 21:09:27 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 64792)
+2025-01-20 21:09:57 - INFO - Archivos agregados: [{'nombre': 'Nuevo Documento de texto (4).txt', 'ttl': 2443, 'publish': True}]
+2025-01-20 21:11:57 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje por ('192.168.56.1', 64792)
+2025-01-20 21:12:27 - INFO - Archivos agregados: [{'nombre': 'Nuevo Documento de texto (5).txt', 'ttl': 7232, 'publish': False}]
+2025-01-20 21:26:59 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Haciendo Ciencia Otonio 2024\Ultima entrega por ('192.168.56.1', 64985)
+2025-01-20 21:28:29 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\Haciendo Ciencia Otonio 2024\Ultima entrega
+2025-01-21 09:11:22 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\CodigosR por ('192.168.56.1', 58706)
+2025-01-21 10:03:53 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\CodigosR por ('192.168.56.1', 54579)
+2025-01-21 10:04:23 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\CodigosR
+2025-01-21 10:23:40 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje\Apuntes de mineria\Regresion Lineal por ('192.168.56.1', 56112)
+2025-01-21 10:24:10 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\Octavo Semestre\Maquinas de aprendizaje\Apuntes de mineria\Regresion Lineal
+2025-01-21 20:09:39 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Programacion distribuida\codigos\sockets\python por ('192.168.0.18', 56532)
+2025-01-21 20:10:09 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\Octavo Semestre\Programacion distribuida\codigos\sockets\python
+2025-01-21 20:28:11 - ERROR - Ruta no válida proporcionada: sf por ('192.168.0.18', 58099)
+2025-01-21 20:29:11 - ERROR - Ruta no válida proporcionada:  por ('192.168.0.18', 58099)
+2025-01-21 20:30:11 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Pictures\Fondos por ('192.168.0.18', 58099)
+2025-01-21 20:31:11 - INFO - Nueva ruta agregada: C:\Users\Bobe\Pictures\Fondos
+2025-01-23 18:34:04 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Pictures\Camera Roll por ('192.168.0.12', 55841)
+2025-01-23 18:34:34 - INFO - Nueva ruta agregada: C:\Users\Bobe\Pictures\Camera Roll
+2025-01-23 18:36:04 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Pictures por ('192.168.0.18', 51845)
+2025-01-23 18:37:04 - INFO - Nueva ruta agregada: C:\Users\Bobe\Pictures
+2025-01-27 10:25:03 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\CodigosR por ('192.168.56.1', 56758)
+2025-01-27 10:25:23 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\CodigosR
+2025-01-27 10:28:09 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\CodigosR por ('192.168.56.1', 57657)
+2025-01-27 10:28:29 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\CodigosR
+2025-01-27 10:30:47 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\CodigosR por ('192.168.56.1', 63945)
+2025-01-27 10:31:07 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\CodigosR
+2025-01-27 10:33:13 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\CodigosR por ('192.168.56.1', 55437)
+2025-01-27 10:33:28 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\CodigosR
+2025-01-27 10:35:27 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\CodigosR por ('192.168.56.1', 58269)
+2025-01-27 10:35:40 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\CodigosR
+2025-02-04 21:48:20 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 55269)
+2025-02-04 21:48:45 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 55269)
+2025-02-04 21:51:15 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 51532)
+2025-02-04 21:52:45 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 56326)
+2025-02-04 21:54:47 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 61461)
+2025-02-04 21:58:46 - ERROR - Ruta no válida proporcionada:  por ('192.168.56.1', 56576)
+2025-02-04 21:59:41 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 64007)
+2025-02-04 22:00:55 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 55125)
+2025-02-04 22:02:43 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 58504)
+2025-02-04 22:04:50 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 51219)
+2025-02-04 22:05:56 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 57887)
+2025-02-04 22:09:24 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 58336)
+2025-02-04 22:10:21 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 56839)
+2025-02-04 22:10:54 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 58723)
+2025-02-04 22:11:44 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 64833)
+2025-02-04 22:12:29 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 61973)
+2025-02-04 22:14:57 - ERROR - Error inesperado al intentar acceder a la ruta: Expecting value: line 1 column 1 (char 0) por ('192.168.56.1', 53188)
+2025-02-04 22:17:11 - INFO - Archivos obtenidos desde la ruta: C:\Users\Bobe\Documents\Octavo Semestre\Programacion distribuida\codigos\practica1\contenidoCliente por ('192.168.56.1', 54648)
+2025-02-04 22:17:31 - INFO - Nueva ruta agregada: C:\Users\Bobe\Documents\Octavo Semestre\Programacion distribuida\codigos\practica1\contenidoCliente
+2025-02-04 22:25:11 - ERROR - Error inesperado al intentar acceder a la ruta: 'ruta' por ('192.168.56.1', 54648)
