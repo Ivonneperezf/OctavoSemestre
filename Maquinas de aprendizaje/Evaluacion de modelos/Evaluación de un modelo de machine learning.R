@@ -197,7 +197,7 @@ error_cost <- matrix(c(0, 1, 4, 0), nrow = 2,
                      dimnames = list(predicted = c("No", "Yes"), actual = c("No", "Yes")))
 error_cost
 students_model2 <- C5.0(Overdrawn ~ Age + Sex + DaysDrink, data = students_train, na.action = na.pass, 
-                        costs = error_cost, control = C5.0Control(minCases = 1), trials = 10,
+                        costs = error_cost, control = C5.0Control(minCases = 1), trials = 50,
                         maxDepth = 10,minSplit = 20)
 students_model2
 summary(students_model2)
